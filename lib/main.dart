@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter30days/pages/day3.dart';
 import 'package:flutter30days/pages/home_page.dart';
 import 'package:flutter30days/pages/image_page.dart';
+import 'package:flutter30days/pages/login_page.dart';
 
 
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'flutter 30 days challenge',
-      home: ImagePage()
+      home: LoginPage()
     );
   }
 }
