@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter30days/pages/day8.dart';
 
 class HomePage  extends StatelessWidget {
+ final UserData userData;
 
+  const HomePage({required this.userData});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +27,7 @@ class HomePage  extends StatelessWidget {
               ),
           ),
           child: Text(
-            'flutter 30 days challenge',
+            'username:${userData.username},userId: ${userData.userID}',
             style: TextStyle(
               fontSize: 25,
               color: Colors.white,
