@@ -4,8 +4,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter30days/pages/day8.dart';
+import 'package:flutter30days/pages/grid_view.dart';
 import 'package:flutter30days/pages/home_page.dart';
+import 'package:flutter30days/pages/list_view_builder.dart';
+import 'package:flutter30days/pages/list_view_example.dart';
 import 'package:flutter30days/pages/login_page.dart';
+import 'package:flutter30days/pages/page_view.dart';
 import 'package:flutter30days/pages/sign_up_page.dart';
 
 class OnGenerateRoute{
@@ -15,9 +19,10 @@ class OnGenerateRoute{
     final args=settings.arguments;
     if (settings.name=='/'){
       return MaterialPageRoute(
-          builder: (_) => Day8()
+          builder: (_) => PageViewExample()
       );
-    }else if (settings.name=='/signup') {
+    }
+    else if (settings.name=='/signup') {
       return MaterialPageRoute(
           builder: (_) => SignUpPage()
       );
