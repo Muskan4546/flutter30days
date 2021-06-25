@@ -3,6 +3,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter30days/pages/day10/animated_builder_example.dart';
+import 'package:flutter30days/pages/day10/animated_widget_example.dart';
+import 'package:flutter30days/pages/day10/simple_animation_example.dart';
+import 'package:flutter30days/pages/day10/simple_basic_animation.dart';
+import 'package:flutter30days/pages/day3.dart';
 import 'package:flutter30days/pages/day8.dart';
 import 'package:flutter30days/pages/grid_view.dart';
 import 'package:flutter30days/pages/home_page.dart';
@@ -19,7 +24,7 @@ class OnGenerateRoute{
     final args=settings.arguments;
     if (settings.name=='/'){
       return MaterialPageRoute(
-          builder: (_) => PageViewExample()
+          builder: (_) => SimpleAnimationExample()
       );
     }
     else if (settings.name=='/signup') {
