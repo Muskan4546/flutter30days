@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter30days/pages/day10/animated_builder_example.dart';
@@ -18,6 +15,7 @@ import 'package:flutter30days/pages/login_page.dart';
 import 'package:flutter30days/pages/page_view.dart';
 import 'package:flutter30days/pages/sign_up_page.dart';
 import 'package:flutter30days/pages/day11/simple_drawer_page.dart';
+import 'package:flutter30days/pages/youtube/youtube_search_page.dart';
 
 import 'day11/animated_drawer_home.dart';
 
@@ -28,7 +26,7 @@ class OnGenerateRoute{
     final args=settings.arguments;
     if (settings.name=='/'){
       return MaterialPageRoute(
-          builder: (_) => AnimatedDrawerHome()
+          builder: (_) => YoutubeSearchPage()
       );
     }
     else if (settings.name=='/signup') {
