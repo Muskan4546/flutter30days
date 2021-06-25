@@ -7,6 +7,7 @@ import 'package:flutter30days/pages/day10/animated_builder_example.dart';
 import 'package:flutter30days/pages/day10/animated_widget_example.dart';
 import 'package:flutter30days/pages/day10/simple_animation_example.dart';
 import 'package:flutter30days/pages/day10/simple_basic_animation.dart';
+import 'package:flutter30days/pages/day11/simple_drawer_page.dart';
 import 'package:flutter30days/pages/day3.dart';
 import 'package:flutter30days/pages/day8.dart';
 import 'package:flutter30days/pages/grid_view.dart';
@@ -16,6 +17,9 @@ import 'package:flutter30days/pages/list_view_example.dart';
 import 'package:flutter30days/pages/login_page.dart';
 import 'package:flutter30days/pages/page_view.dart';
 import 'package:flutter30days/pages/sign_up_page.dart';
+import 'package:flutter30days/pages/day11/simple_drawer_page.dart';
+
+import 'day11/animated_drawer_home.dart';
 
 class OnGenerateRoute{
   static Route<dynamic>? route(RouteSettings settings){
@@ -24,7 +28,7 @@ class OnGenerateRoute{
     final args=settings.arguments;
     if (settings.name=='/'){
       return MaterialPageRoute(
-          builder: (_) => SimpleAnimationExample()
+          builder: (_) => AnimatedDrawerHome()
       );
     }
     else if (settings.name=='/signup') {
