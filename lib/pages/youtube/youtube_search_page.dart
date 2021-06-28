@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter30days/pages/youtube/model/youtube_search_model.dart';
 
 
 
@@ -13,6 +17,20 @@ class _YoutubeSearchPageState extends State<YoutubeSearchPage> {
 
   bool _isSearch=false;
   int navIndex=0;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadMockDataFromAssets();
+  }
+
+  Future<void> _loadMockDataFromAssets() async {
+    final assetsData= await rootBundle.loadString('assets/youtube_search.json');
+
+    // print(json.decode(assetsData)['regionCode']);
+   final response= YoutubeSearchModel.fromJson(jsonDecode(assetsData));
+  print(response.items[0].snippet.thumbnails.high.url);
+  }
 
   Widget _searchWidget(){
     return Row(
