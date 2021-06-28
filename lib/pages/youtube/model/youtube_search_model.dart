@@ -1,5 +1,5 @@
 import 'package:flutter30days/pages/youtube/model/item_data.dart';
-import 'package:flutter30days/pages/youtube/model/page_info_date.dart';
+import 'package:flutter30days/pages/youtube/model/page_info_data.dart';
 
 class YoutubeSearchModel {
   final String kind;

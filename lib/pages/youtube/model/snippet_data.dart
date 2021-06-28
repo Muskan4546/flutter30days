@@ -7,13 +7,13 @@ import 'dart:convert';
 import 'package:flutter30days/pages/youtube/model/thumbnails.dart';
 
 class SnippetData {
-  final String? publishedAt;
-  final String? channelId;
-  final String? title;
-  final String? description;
-  final String? channelTitle;
-  final String? liveBroadcastContent;
-  final String? publishTime;
+  final String publishedAt;
+  final String channelId;
+  final String title;
+  final String description;
+  final String channelTitle;
+  final String liveBroadcastContent;
+  final String publishTime;
   final Thumbnails thumbnails;
 
 

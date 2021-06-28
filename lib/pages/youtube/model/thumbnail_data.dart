@@ -5,9 +5,9 @@
 
 
 class ThumbnailData{
-  final String? url;
-  final String? width;
-  final String? height;
+  final String url;
+  final String width;
+  final String height;
 
   ThumbnailData({required this.url, required this.width, required this.height});
 

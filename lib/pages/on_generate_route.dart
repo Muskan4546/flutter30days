@@ -15,46 +15,73 @@ import 'package:flutter30days/pages/login_page.dart';
 import 'package:flutter30days/pages/page_view.dart';
 import 'package:flutter30days/pages/sign_up_page.dart';
 import 'package:flutter30days/pages/day11/simple_drawer_page.dart';
+import 'package:flutter30days/pages/youtube/model/item_data.dart';
+import 'package:flutter30days/pages/youtube/play_video.dart';
 import 'package:flutter30days/pages/youtube/youtube_search_page.dart';
 
 import 'day11/animated_drawer_home.dart';
 
+
 class OnGenerateRoute{
-  static Route<dynamic>? route(RouteSettings settings){
 
-
+  static Route<dynamic> route(RouteSettings settings){
     final args=settings.arguments;
-    if (settings.name=='/'){
+
+    if (settings.name=="/"){
       return MaterialPageRoute(
           builder: (_) => YoutubeSearchPage()
       );
-    }
-    else if (settings.name=='/signup') {
+    }else if (settings.name=="/playVideo"){
+      if (args is ItemData) {
+        return MaterialPageRoute(
+            builder: (_) => PlayVideo(item: args,)
+        );
+      }else{
+        return MaterialPageRoute(
+            builder: (_) => Scaffold(
+              appBar: AppBar(
+                title: Text("error"),
+              ),
+              body: Center(
+                child: Text("error"),
+              ),
+            )
+        );
+      }
+    }else if (settings.name=="/signup"){
       return MaterialPageRoute(
           builder: (_) => SignUpPage()
       );
-    }
-    else if (settings.name=='/login') {
+    }else if (settings.name=="/login"){
       return MaterialPageRoute(
           builder: (_) => LoginPage()
       );
-    }
-    else if (settings.name=='/homePage') {
+    }else if (settings.name=="/homePage"){
       if (args is UserData)
         return MaterialPageRoute(
-          builder: (_) => HomePage(userData: args,),
+            builder: (_) => HomePage(userData: args,)
         );
-    }
-    else{
+      else
+        return MaterialPageRoute(
+            builder: (_) => Scaffold(
+              appBar: AppBar(
+                title: Text("error"),
+              ),
+              body: Center(
+                child: Text("error"),
+              ),
+            )
+        );
+    }else{
       return MaterialPageRoute(
-        builder: (_) => Scaffold(
-          appBar: AppBar(
-            title: Text('error'),
-          ),
-          body: Center(
-            child: Text('error'),
-          ),
-        ),
+          builder: (_) => Scaffold(
+            appBar: AppBar(
+              title: Text("error"),
+            ),
+            body: Center(
+              child: Text("error"),
+            ),
+          )
       );
     }
   }

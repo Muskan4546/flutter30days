@@ -1,8 +1,6 @@
-import 'dart:convert';
-
 class IdData{
-  final String? kind;
-  final String? videoId;
+  final String kind;
+  final String videoId;
 
   IdData({required this.kind, required this.videoId});
 
