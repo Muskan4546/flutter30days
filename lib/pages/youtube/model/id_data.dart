@@ -1,6 +1,6 @@
 class IdData{
   final String kind;
-  final String videoId;
+  final  videoId;
 
   IdData({required this.kind, required this.videoId});
 
